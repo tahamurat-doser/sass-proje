@@ -1,4 +1,29 @@
 
 .home-bgImg-container{
- @include bgImg(100vh);
+ @include bgImg(100vh, $pathName1); 
+
+/* background-image: url(../../img/model-1.jpg); */
+}
+.home{
+    /* border: 2px solid red; */
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    &__name{
+        font-size: 4rem;
+        padding-bottom: 1rem;
+        margin-bottom: 1rem;
+        border-bottom: 2px solid $text-color;
+        width: 100%;
+        &--last{
+            color: red;
+            font-weight: 700;
+        }
+
+    }
+
+
 }

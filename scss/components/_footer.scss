@@ -1,0 +1,22 @@
+
+.link-style{
+    a{
+        padding: 0.5rem;
+        @include soft(1s);
+        &:hover{
+            color: $secondery-color;
+        }
+    }
+}
+
+
+
+footer.horizontal{
+    border: 2px solid red;
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 1rem;
+    @extend .link-style;
+}
