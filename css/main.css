@@ -5,11 +5,11 @@
   box-sizing: border-box;
 }
 
-.link-style a, footer.horizontal a {
-  padding: 0.5rem;
+.link-style a, footer.vertical .social-icons a, footer.horizontal a {
+  padding: 0.3rem;
   transition: all 1s;
 }
-.link-style a:hover, footer.horizontal a:hover {
+.link-style a:hover, footer.vertical .social-icons a:hover, footer.horizontal a:hover {
   color: #ff652f;
 }
 
@@ -20,6 +20,31 @@ footer.horizontal {
   justify-content: space-between;
   align-items: flex-end;
   padding: 1rem;
+}
+
+footer.vertical {
+  /* border: 2px solid red; */
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 2rem;
+}
+footer.vertical .social-icons {
+  display: flex;
+  flex-direction: column;
+  /*  margin: 1rem;
+   gap:1rem */
+  position: fixed;
+  bottom: 1rem;
+  /*  gap:1rem; */
+}
+footer.vertical .copyright {
+  /*  display: flex;
+   flex-direction: column; */
+  position: fixed;
+  right: 1rem;
+  transform: rotate(90deg) translate(-5rem, -1rem);
+  /* writing-mode: vertical-lr; */
 }
 
 .nav {
@@ -50,6 +75,49 @@ footer.horizontal {
   color: #ff652f;
 }
 
+.about-bgImg-container {
+  /* border: 2px solid red; */
+  height: 50vh;
+  width: 100%;
+  background: linear-gradient(to right, rgba(39, 39, 39, 0.9), rgba(39, 39, 39, 0.3)), url("../../img/model-1.jpg");
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.about-bgImg-container .about__bio-image {
+  text-align: center;
+}
+.about-bgImg-container .about__bio-image h2 {
+  font-size: 3rem;
+  color: #ff652f;
+}
+.about-bgImg-container .about__bio-image p {
+  font-size: 1.1rem;
+  margin: 1.3rem;
+  line-height: 1.4rem;
+}
+
+.about__container {
+  /* border: 2px solid red; */
+  width: 70%;
+  margin: 2rem auto;
+}
+.about .about__job {
+  /* border: 2px solid red; */
+  margin: 1rem;
+  background-color: #414141;
+  padding: 1rem;
+  border-bottom: 5px solid #ff652f;
+}
+.about .about__job h2, .about .about__job h3 {
+  margin: 0.5rem, 0;
+}
+.about .about__job h6 {
+  margin: 0.3rem 0;
+}
+
 .home-bgImg-container {
   height: 100vh;
   width: 100%;
@@ -78,6 +146,36 @@ footer.horizontal {
 .home__name--last {
   color: red;
   font-weight: 700;
+}
+
+.project-bgImg-container {
+  /* border: 2px solid red; */
+  height: 40vh;
+  width: 100%;
+  background: linear-gradient(to right, rgba(39, 39, 39, 0.9), rgba(39, 39, 39, 0.3)), url("../../img/model-1.jpg");
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.project-bgImg-container .projects__bio-image {
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.projects__items {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 2rem 5rem;
+}
+.projects__item {
+  width: 100%;
+}
+.projects__item img {
+  width: 100%;
 }
 
 body {
