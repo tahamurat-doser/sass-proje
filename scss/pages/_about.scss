@@ -1,4 +1,9 @@
+@use '../abstracts/mixins';
+@use '../abstracts/variables';
+
+
 .about-bgImg-container{
+    
     /* border: 2px solid red; */
     @include bgImg (50vh, $pathName1);
     display: flex;

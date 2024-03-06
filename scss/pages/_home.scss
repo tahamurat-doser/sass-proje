@@ -1,4 +1,5 @@
-
+@use '../abstracts/mixins';
+@use '../abstracts/variables';
 .home-bgImg-container{
  @include bgImg(100vh, $pathName1); 
 

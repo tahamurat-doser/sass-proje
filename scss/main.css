@@ -33,18 +33,31 @@ footer.vertical .social-icons {
   display: flex;
   flex-direction: column;
   /*  margin: 1rem;
-   gap:1rem */
+      gap:1rem */
   position: fixed;
   bottom: 1rem;
   /*  gap:1rem; */
 }
 footer.vertical .copyright {
   /*  display: flex;
-   flex-direction: column; */
+      flex-direction: column; */
   position: fixed;
   right: 1rem;
+  bottom: 1rem;
   transform: rotate(90deg) translate(-5rem, -1rem);
   /* writing-mode: vertical-lr; */
+}
+
+footer.middle {
+  /* border: 2px solid red; */
+  height: 20vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  /* @extend .link-style; */
 }
 
 .nav {
@@ -118,6 +131,43 @@ footer.vertical .copyright {
   margin: 0.3rem 0;
 }
 
+.contact-bgImg-container {
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient(to right, rgba(39, 39, 39, 0.9), rgba(39, 39, 39, 0.3)), url("../../img/model-1.jpg");
+  background-position: center;
+  background-size: cover;
+}
+.contact-bgImg-container .nav {
+  height: 40vh;
+}
+
+.contact {
+  /* border: 2px solid red; */
+  height: 40vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.contact h2 {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+.contact__list {
+  /*  border: 2px solid red; */
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 1.5rem;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+}
+.contact .text-secondary {
+  color: #ff652f;
+}
+
 .home-bgImg-container {
   height: 100vh;
   width: 100%;
@@ -170,14 +220,53 @@ footer.vertical .copyright {
   flex-wrap: wrap;
   justify-content: center;
   padding: 2rem 5rem;
+  gap: 1rem 0;
 }
 .projects__item {
   width: 100%;
+  cursor: pointer;
+  border-bottom: 5px solid #ff652f;
+  position: relative;
 }
 .projects__item img {
   width: 100%;
 }
+.projects__item::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: #ff652f;
+  position: absolute;
+  left: 0;
+  opacity: 0;
+  transition: all 0.5s;
+}
+.projects__item:hover::after {
+  opacity: 0.7;
+}
 
+@media screen and (min-width: 0px) {
+  .nav {
+    padding: 0.5rem;
+  }
+  .nav__list {
+    text-align: center;
+  }
+  .nav__item {
+    padding-right: 0.7rem;
+  }
+  .nav .nav__link {
+    font-size: 0.9rem;
+  }
+  .contact h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  .contact__list {
+    gap: 2rem 1.2rem;
+    font-size: 1.2rem;
+  }
+}
 body {
   font-family: "Segoe UI', Tahoma, Geneva, Verdana, sans-serif";
   background-color: #272727;

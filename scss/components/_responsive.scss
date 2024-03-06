@@ -1,0 +1,26 @@
+@use '../abstracts/mixins';
+
+@include media-xsm{
+    .nav {
+        padding: 0.5rem;
+        &__list {
+          text-align: center;
+        }
+        &__item {
+          padding-right: 0.7rem;
+        }
+        .nav__link {
+          font-size: 0.9rem;
+        }
+      }
+      .contact {
+        h2 {
+          font-size: 2rem;
+          margin-bottom: 1rem;
+        }
+        &__list {
+          gap: 2rem 1.2rem;
+          font-size: 1.2rem;
+        }
+      }
+}
